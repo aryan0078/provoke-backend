@@ -6,9 +6,10 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+const cors = require("cors");
 const { MONGODB_URL } = require("./utils/constants");
 var app = express();
-
+app.use(cors());
 mongoose
   .connect(MONGODB_URL, {
     useNewUrlParser: true,
