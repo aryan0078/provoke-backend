@@ -6,10 +6,11 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+const { MONGODB_URL } = require("./utils/constants");
 var app = express();
 
 mongoose
-  .connect("mongodb://localhost:27017/provoke", {
+  .connect(MONGODB_URL, {
     useNewUrlParser: true,
   })
   .then(() => {

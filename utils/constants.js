@@ -2,8 +2,9 @@ const bcrypt = require("bcryptjs");
 
 const STRIPE_SECRET_KEY =
   "sk_test_51ODJN0SBl3tVVm4ZdJOXUoZ7kJ7wS74nlSBk54HmU95APLjU97YF5kTgqcEPNOktaS07K21IVSfD1NyGsNOCuuVD00eqIEQV9Z";
-const MONGODB_URL = "";
-i48SvqEOaWRQZU9h;
+const MONGODB_URL =
+  "mongodb+srv://aryan:i48SvqEOaWRQZU9h@cluster0.hxyrlvf.mongodb.net/?retryWrites=true&w=majority";
+
 const hashPassword = (password) => {
   return bcrypt.hashSync(password, 10);
 };
@@ -37,4 +38,5 @@ module.exports = {
   STRIPE_SECRET_KEY,
   validateEmail,
   plans,
+  MONGODB_URL,
 };
